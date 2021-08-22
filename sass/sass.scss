@@ -8,10 +8,11 @@
     --pink: #e56d75;
 }
 
+$font: "Sego UI Light", -apple-system, BlinkMacSystemFont, sans-serif;
+
 body {
     margin: 2%;
     font-style: normal;
-    font-family: "Sego UI Light", -apple-system, BlinkMacSystemFont, sans-serif;
     background-color: var(--white);
 }
 
@@ -19,7 +20,7 @@ p {
     width: 100%;
     height: 100%;
     text-align: justify;
-    font-family: "Segoe UI Light", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: $font;
 }
 
 table {
@@ -47,33 +48,33 @@ ul {
     text-align: center;
 }
 
-div a 
-{
-    text-decoration: none;
-}
+div {
+    a { text-decoration: none; }
 
-div table {
-    margin-top: 3%;
+    table { margin-top: 3%; }
 }
 
 #header {
     text-align: center;
 }
 
-.palm, .finger, .claw {
+%heading {
     margin-top: 10%;
     text-align: center;
 }
 
 .palm {
+    @extend %heading;
     color: var(--pink);
 }
 
 .finger {
+    @extend %heading;
     color: var(--pastel);
 }
 
 .claw {
+    @extend %heading;
     color: var(--yellow);
 }
 

@@ -57,6 +57,10 @@ ul {
     width: 315px;
 }
 
+.list {
+    margin: 10%;
+}
+
 .button {
     text-decoration: none;
     background-color: var(--blue);
